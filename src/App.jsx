@@ -152,7 +152,7 @@ const PRODUCTS = [
 // Studio product photography lives in /public/product-images/<id>-N.jpg — drop real
 // photos in with matching filenames to replace the generated placeholders instantly.
 for (const p of PRODUCTS) {
-  p.images = [1, 2, 3].map((n) => `/product-images/${p.id}-${n}.jpg`);
+  p.images = [1, 2, 3].map((n) => `${import.meta.env.BASE_URL}product-images/${p.id}-${n}.jpg`);((n) => `/product-images/${p.id}-${n}.jpg`);
   p.image = p.images[0];
 }
 
